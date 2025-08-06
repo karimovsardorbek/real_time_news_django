@@ -1,5 +1,6 @@
 const shownArticleIds = new Set();
 
+// Fetch articles from the API and render them on the page
 async function fetchArticles() {
   try {
     const res = await fetch('http://localhost:8010/api/articles/');
@@ -11,6 +12,7 @@ async function fetchArticles() {
   }
 }
 
+// Add an article to the DOM if it hasn't been shown yet
 function addArticleToDOM(article) {
   if (shownArticleIds.has(article.id)) return;
 
@@ -19,6 +21,7 @@ function addArticleToDOM(article) {
   shownArticleIds.add(article.id);
 }
 
+// Render an article card with image, title, meta info, and content
 function renderArticle(article) {
   const card = document.createElement('div');
   card.className = 'news-card';
@@ -55,6 +58,7 @@ function renderArticle(article) {
   return card;
 }
 
+// WebSocket connection to receive live updates for news articles
 const socket = new WebSocket('ws://localhost:8010/ws/news/');
 
 socket.onopen = () => {
