@@ -25,8 +25,8 @@ A real-time news aggregation portal that delivers live updates via WebSocket wit
 ### Installation
 ```bash
 # Clone repo
-git clone https://github.com/yourusername/real-time-news.git
-cd real-time-news
+git clone https://github.com/karimovsardorbek/real_time_news_django.git
+cd real_time_news_django
 
 # Backend setup
 python -m venv venv
