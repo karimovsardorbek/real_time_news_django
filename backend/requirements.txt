@@ -1,0 +1,8 @@
+Django
+djangorestframework
+channels
+Faker
+django-cors-headers
+daphne
+channels_redis
+djangorestframework-simplejwt
