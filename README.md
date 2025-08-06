@@ -33,7 +33,7 @@ python -m venv venv
 source venv/bin/activate  # Linux/Mac
 venv\Scripts\activate    # Windows
 
-pip install -r backend/requirements.txt
+pip install -r requirements.txt
 cd backend
 python manage.py migrate
 python manage.py createsuperuser
@@ -69,6 +69,7 @@ const socket = new WebSocket('ws://localhost:8010/ws/news/');
 - Django 4.2
 - Django Channels
 - Daphne ASGI
+- Redis
 
 #### Frontend:
 - Vanilla JavaScript

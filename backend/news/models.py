@@ -1,5 +1,7 @@
 from django.db import models
 
+
+# Model representing a news article
 class Article(models.Model):
     title = models.CharField(max_length=255)
     summary = models.TextField()

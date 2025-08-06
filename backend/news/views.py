@@ -9,6 +9,7 @@ from channels.layers import get_channel_layer
 import random
 
 
+# View to retrieve a list of articles
 class ArticleListView(APIView):
     permission_classes = [AllowAny]
 
@@ -18,12 +19,12 @@ class ArticleListView(APIView):
         return Response(serializer.data)
 
 
+# View to generate a mock article
 class GenerateMockArticleView(APIView):
     permission_classes = [IsAuthenticated]
 
     def post(self, request):
         fake = Faker()
-        # Generate a random image URL (using picsum.photos)
         random_image_url = f"https://picsum.photos/seed/{random.randint(1, 10000)}/600/400"
         article = Article.objects.create(
             title=fake.sentence(),

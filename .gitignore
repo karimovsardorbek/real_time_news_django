@@ -22,7 +22,6 @@ venv.bak/
 
 # Django settings and sensitive files
 local_settings.py
-settings.py
 *.env
 .env
 .env.*
